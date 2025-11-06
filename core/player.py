@@ -22,9 +22,7 @@ class Player:
         self.value_per_queue+=self.speed
    
           
-t1=Player("simi",50,6,9,8,"kil") 
-print(t1.hp)          
-            
+
             
         
         

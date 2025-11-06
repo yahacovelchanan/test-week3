@@ -1,13 +1,16 @@
 import random
-
+from core import goblin,orc
+     
 class Player:
-    def __init__(self,name,hp=70,speed=90,power=98,armor_ratin,profession):
+    def __init__(self,name,munster=random.choice[goblin.Goblin(),orc.Orc()],hp=50,speed=random.randint(5,10),power=random.randint(5,10),armor_rating=random.randint(5,15),profession=random.choice(["fighter","doctor"])):
         self.name=name
-        self.hp=50
-        self.speed=random.randint(5,10)
-        self.power=random.randint(5,10)
-        self.armor_rating=random.randint(5,15)
-        self.profession=random.choice(["fighter","doctor"])
+        self.hp=hp
+        self.speed=speed
+        self.speed=speed
+        self.power=power
+        self.armor_rating=armor_rating
+        self.profession=profession
+        self.munster=munster
         if self.profession== "fighter":
             self.power+=2
         if self.profession== "doctor" :
@@ -20,6 +23,29 @@ class Player:
     def attack(self):
         self.value_per_queue=random.randint(1,20)
         self.value_per_queue+=self.speed
+        return self.value_per_queue
+    
+    def results_of_the_impact(self):
+        if self.value_per_queue>self.munster.armor_rating:
+            injury=random.randint(1,6)
+            injury+=self.power
+            self.munster.hp-=injury
+            if self.munster.hp<=0:
+                print(f"{self.munster}Life is over.")
+        else:
+            print("miss")        
+            
+            
+    
+  
+        
+   
+        
+          
+            
+
+
+        
    
           
 

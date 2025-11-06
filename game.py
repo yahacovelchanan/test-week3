@@ -1,16 +1,11 @@
 from core import goblin,orc,player
+from main import create_player,choose_random_monster,show_menu,start,battle, show_menu
 class Game(goblin,orc,player):
     def __init__(self):
-        pass
+    
    
-    def show_menu():
-        battle=1
-        exit=2
-        user=int(input("""
-              If you want to play press 1
-              If you want to exit press 2
-              """))
-        return user
+   
+    
             
     
                  

@@ -29,6 +29,8 @@ class Goblin:
                 self.power*=1.5        
             injury+=self.power    
             self.player.hp-=injury
+            if self.player.hp<=0:
+                print(f"{self.player}Life is over.")
         else:
             print("miss") 
         

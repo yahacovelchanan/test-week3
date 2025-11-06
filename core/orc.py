@@ -30,7 +30,7 @@ class Orc:
             injury+=self.power    
             self.munster.hp-=injury
             if self.player.hp<=0:
-                print(f"{self.munster}Life is over.")
+                print(f"{self.player}Life is over.")
         else:
             print("miss") 
            
